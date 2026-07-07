@@ -1,0 +1,22 @@
+# 6. Project Testing Phase
+
+## Testing Strategy
+To ensure the reliability and accuracy of the Credit Card Approval Prediction System, the following testing approach will be implemented:
+
+- Unit Testing: Individual components such as form validation in HTML templates and the backend logic in `app.py` will be tested to ensure they function as expected.
+- Integration Testing: Verification that the frontend (HTML form) correctly communicates with the backend (Flask) and that the backend successfully loads and uses the `best_credit_model.pkl` file.
+- Functional Testing: Ensuring that the application correctly processes user inputs and displays the appropriate "Approved" or "Rejected" result on the `result.html` page.
+
+## Test Cases
+| Test ID | Test Scenario | Expected Result |
+| :--- | :--- | :--- |
+| TC01 | Form Submission | Data is captured correctly and sent to the backend. |
+| TC02 | Model Prediction | The model processes input and returns a valid prediction. |
+| TC03 | UI Navigation | Users are redirected correctly from Home to Result page. |
+| TC04 | Error Handling | System provides feedback if invalid or empty data is submitted. |
+
+## Performance & Validation
+- Accuracy Check: Validate if the model's prediction accuracy aligns with the training results.
+- Responsiveness: Test the UI across different screen sizes to ensure it is user-friendly.
+- Deployment Readiness: Ensure no bugs remain that could prevent the application from running in a live or local environment.
+-
