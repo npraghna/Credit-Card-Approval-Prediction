@@ -1,0 +1,32 @@
+# 2. Requirement Analysis
+
+## Functional Requirements
+- Data Input: The system must accept applicant details (e.g., age, income, credit history).
+- Processing: The system must process this input using the pre-trained machine learning model.
+- Output: The system must display the approval status ("Approved" or "Rejected") to the user.
+- User Interface: A simple, intuitive web interface to capture user data and display results.
+
+## Technical Requirements
+- Programming Language: Python 3.x
+- Web Framework: Flask (to handle routing and server-side logic).
+- Machine Learning Libraries:
+  - Pandas & NumPy: For efficient data manipulation and numerical analysis.
+  - Scikit-learn: For implementing the classification model and data preprocessing.
+  - Joblib/Pickle: For model serialization and loading the pre-trained model.
+- Development Environment: VS Code, Jupyter Notebook.
+- Deployment & Version Control: Git & GitHub for code management.
+
+## Hardware & Software Dependencies
+- Hardware: Computer with at least 4GB RAM (8GB recommended) and a stable internet connection for environment setup.
+- Operating System: Compatible with Windows 10/11, macOS, or Linux.
+- Browser: Any modern web browser (Chrome, Firefox, or Edge) to interact with the application.
+
+## Data Requirements
+- Dataset: Historical credit card application data containing features like credit score, income, debt levels, employment history, and past payment behavior.
+- Preprocessing: Need to handle missing values, encode categorical variables, and normalize numerical features for better model performance.
+
+## Project Deliverables
+- Source Code: Well-documented Python scripts and HTML templates.
+- Model: A serialized `.pkl` or `.joblib` file containing the trained model.
+- Documentation: README files for each project phase and a user manual for operating the application.
+-
