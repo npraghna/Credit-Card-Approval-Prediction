@@ -1,0 +1,22 @@
+# 7. Project Deployment Phase
+
+## Deployment Strategy
+The Credit Card Approval Prediction System will be deployed to make it accessible for end-users. 
+
+- Local Deployment: Running the Flask application locally using the command `python app.py`. This ensures all dependencies and configurations are working in the development environment.
+- Dependency Management: All project dependencies are documented in `requirements.txt`.
+    - Libraries included: `Flask`, `pandas`, `numpy`, `scikit-learn`, `joblib`.
+- Environment Setup:
+    - The environment is configured to use relative paths for the model (`best_credit_model.pkl`) and HTML templates, ensuring the app runs seamlessly regardless of the directory location.
+- Future Cloud Deployment (Scalability): 
+    - The architecture is built to be cloud-ready, supporting platforms like:
+        - Render: For seamless CI/CD integration.
+        - PythonAnywhere: Ideal for hosting lightweight Flask applications.
+        - Heroku: For robust web application hosting.
+
+## Deployment Checklist
+1. Model Serialization: Ensure the `.pkl` file is saved with the correct version of `scikit-learn` to avoid compatibility issues.
+2. Environment Isolation: Use a Virtual Environment (venv) to prevent dependency conflicts.
+3. Port Configuration: Flask is configured to run on `localhost:5000` by default.
+4. Error Logging: Implement basic logging in `app.py` to capture request errors during production.
+5.
