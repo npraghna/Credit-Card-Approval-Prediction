@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Status</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 min-h-screen flex items-center justify-center font-sans antialiased text-slate-800">
+
+    <div class="max-w-md w-full mx-4 bg-white rounded-2xl shadow-xl shadow-slate-200/80 p-8 border border-slate-100 text-center">
+        
+        <h2 class="text-xl font-bold text-slate-900 mb-6">Evaluation Result</h2>
+
+        {% if prediction_text == "Approved" %}
+        <div class="mb-6 p-4 bg-emerald-50 text-emerald-600 rounded-xl font-bold text-lg">
+            Status: Approved
+        </div>
+        {% else %}
+        <div class="mb-6 p-4 bg-rose-50 text-rose-600 rounded-xl font-bold text-lg">
+            Status: Rejected
+        </div>
+        {% endif %}
+
+        <a href="/" class="block w-full py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium rounded-xl text-sm">
+            Go Back
+        </a>
+    </div>
+</body>
+</html>

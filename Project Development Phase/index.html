@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 p-6">
+    <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
+        <h2 class="text-2xl font-bold text-slate-800 mb-6 text-center">Enter Applicant Financial Profile</h2>
+        
+        <form action="/result" method="POST" class="space-y-4">
+            <!-- Gender -->
+            <div>
+                <label class="block text-sm font-semibold text-slate-700">Gender:</label>
+                <select name="Gender" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-lg">
+                    <option>Male</option><option>Female</option>
+                </select>
+            </div>
+            
+            <!-- Owns Car & Property -->
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700">Owns Car:</label>
+                    <select name="Owns_Car" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-lg"><option>Yes</option><option>No</option></select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700">Owns Property:</label>
+                    <select name="Owns_Property" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-lg"><option>Yes</option><option>No</option></select>
+                </div>
+            </div>
+
+            <!-- Income with +/- Buttons -->
+            <div>
+                <label class="block text-sm font-semibold text-slate-700">Income Level ($):</label>
+                <div class="flex items-center gap-2">
+                    <button type="button" onclick="changeValue('Income_Total', -1000)" class="px-3 py-2 bg-slate-200 rounded-lg font-bold">-</button>
+                    <input type="number" id="Income_Total" name="Income_Total" value="50000" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-lg text-center">
+                    <button type="button" onclick="changeValue('Income_Total', 1000)" class="px-3 py-2 bg-slate-200 rounded-lg font-bold">+</button>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div>
+                <label class="block text-sm font-semibold text-slate-700">Education Type:</label>
+                <select name="Education" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-lg">
+                    <option>Higher education</option><option>Secondary</option>
+                </select>
+            </div>
+
+            <!-- Family Status (Select Added) -->
+            <div>
+                <label class="block text-sm font-semibold text-slate-700">Family Status:</label>
+                <select name="Family_Status" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-lg">
+                    <option>Married</option><option>Single</option><option>Civil marriage</option><option>Separated</option><option>Widow</option>
+                </select>
+            </div>
+
+            <!-- Housing Type (Select Added) -->
+            <div>
+                <label class="block text-sm font-semibold text-slate-700">Housing Type:</label>
+                <select name="Housing" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-lg">
+                    <option>House / apartment</option><option>Rented apartment</option><option>Municipal apartment</option><option>With parents</option>
+                </select>
+            </div>
+
+            <!-- Age with +/- Buttons -->
+            <div>
+                <label class="block text-sm font-semibold text-slate-700">Applicant Age (Years):</label>
+                <div class="flex items-center gap-2">
+                    <button type="button" onclick="changeValue('Age', -1)" class="px-3 py-2 bg-slate-200 rounded-lg font-bold">-</button>
+                    <input type="number" id="Age" name="Age" value="30" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-lg text-center">
+                    <button type="button" onclick="changeValue('Age', 1)" class="px-3 py-2 bg-slate-200 rounded-lg font-bold">+</button>
+                </div>
+            </div>
+
+            <button type="submit" class="w-full py-3 mt-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition">Predict Approval Status</button>
+        </form>
+    </div>
+
+    <script>
+        function changeValue(id, amount) {
+            let input = document.getElementById(id);
+            input.value = parseInt(input.value) + amount;
+        }
+    </script>
+</body>
+</html>
