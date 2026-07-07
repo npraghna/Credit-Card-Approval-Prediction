@@ -1,0 +1,24 @@
+# 4. Project Planning Phase
+
+## Project Timeline (Milestones)
+- Phase 1: Research & Ideation: Defining the scope, objectives, and problem statement.
+- Phase 2: Requirement Analysis: Identifying necessary technologies, libraries, and hardware.
+- Phase 3: Design & Architecture: Planning the application workflow and MVC structure.
+- Phase 4: Development: Data collection, preprocessing, model training, and web integration.
+- Phase 5: Testing: Unit testing, integration testing, and performance validation.
+- Phase 6: Documentation & Final Demo: Finalizing the reports and preparing for the demonstration.
+
+## Task Breakdown (Resources & Allocation)
+- Developer Tasks:
+  - Coding the Flask backend logic.
+  - Developing HTML/CSS templates.
+  - Training and tuning the Machine Learning model.
+- Documentation Tasks:
+  - Creating project reports and technical documentation.
+  - Maintaining README files for each project phase.
+
+## Tools and Environment Management
+- Environment: VS Code for coding, Jupyter Notebook for experimentation.
+- Workflow: Weekly review of development progress against the defined milestones.
+- Collaboration: Version control using Git to track changes and manage project versions.
+-
